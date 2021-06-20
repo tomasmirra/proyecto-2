@@ -14,7 +14,7 @@ class User {
   }
 }
 
-class AdminUser extends User {
+class Admin extends User {
   constructor(userName, role, password) {
     super(userName, role, password);
   }
@@ -26,5 +26,5 @@ class CommonUser extends User {
   }
 }
 
-const userType = new AdminUser("Admin", "administrator", 12345);
+const userType = new Admin("Admin", "administrator", 12345);
 const userType2 = new CommonUser("User", "user", 6789);
