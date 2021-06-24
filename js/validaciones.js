@@ -28,3 +28,33 @@ class CommonUser extends User {
 
 const userType = new Admin("Admin", "administrator", 12345);
 const userType2 = new CommonUser("User", "user", 6789);
+
+
+
+  const TITLE_SELECTOR = document.querySelector("#songTtile");
+  const DURATION_SELECTOR = document.querySelector("#songDuration");
+  const ALBUM_SELECTOR = document.querySelector("#songAlbum");
+  const ARTIST_SELECTOR = document.querySelector("#songArtist");
+  const CATEGORY_SELECTOR = document.querySelector("#songCategory");
+  const BTN_FORM_SELECTOR = document.querySelector("#btn-form-properties");
+  BTN_FORM_SELECTOR.disabled = true;
+
+  TITLE_SELECTOR.addEventListener("change", formSongValidations);
+  DURATION_SELECTOR.addEventListener("change", formSongValidations);
+  ALBUM_SELECTOR.addEventListener("change", formSongValidations);
+  ARTIST_SELECTOR.addEventListener("change", formSongValidations);
+  CATEGORY_SELECTOR.addEventListener("change", formSongValidations);
+
+  function formSongValidations() {
+    if (
+      document.querySelector("#songTtile").value === "" ||
+      document.querySelector("#songDuration").value === "" ||
+      document.querySelector("#songAlbum").value === "" ||
+      document.querySelector("#songArtist").value === "" ||
+      document.querySelector("#songCategory").value === ""
+    ) {
+      BTN_FORM_SELECTOR.disabled = true;
+    } else {
+      BTN_FORM_SELECTOR.disabled = false;
+    }
+  }
