@@ -36,16 +36,60 @@ body {
 
 .cover-title {
   color: #F25244;
-  font-size: 8vw;
+  font-size: 14vw;
   font-weight: 600;
 }
 
 .sub-text {
-  /* font-size: 2vw; */
   font-weight: 100;
 }
 
 .play-icon {
   color: white;
   font-size: 48px;
+}
+
+.navbarColor {
+  background-color: #0C1526;
+}
+
+.navbar-toggler-icon,
+.navbar-toggler {
+  color: white;
+}
+
+.btn-primary {
+  background-color: #F25244;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #f08e85;
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .cover-title {
+  color: #F25244;
+  font-size: 16vw;
+  font-weight: 600;
+}
+
+.sub-text {
+  font-size: 4vw;
+  font-weight: 100;
+}
+
+.overlay-video-text {
+  position: absolute;
+  top: 50%;
+}
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 1024px) {
+  
 }
