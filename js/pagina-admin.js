@@ -1,6 +1,7 @@
 class Songs {
-  constructor(title, duration, album, artist, category) {
+  constructor(image ,title, duration, album, artist, category) {
     this.id = Date.now();
+    this.image = image;
     this.title = title;
     this.duration = duration;
     this.album = album;
@@ -20,7 +21,8 @@ class UI {
     const row = document.createElement("tr");
     row.id = song.id;
     row.innerHTML = `
-    <td>${song.id}</td>
+    <td class="border-top-0">${song.id}</td>
+    <td><img src="${song.image}" width="40px" height="40px"></td>
     <td>${song.title}</td>
     <td>${song.duration}</td>
     <td>${song.album}</td>
@@ -56,13 +58,14 @@ class Store {
 const FORM_SELECTOR = document.querySelector("#song-form");
 FORM_SELECTOR.addEventListener("submit", (e) => {
   e.preventDefault();
+  const image = document.querySelector("#songImage").value;
   const title = document.querySelector("#songTtile").value;
   const duration = document.querySelector("#songDuration").value;
   const album = document.querySelector("#songAlbum").value;
   const artist = document.querySelector("#songArtist").value;
   const category = document.querySelector("#songCategory").value;
 
-  const song = new Songs(title, duration, album, artist, category);
+  const song = new Songs(image, title, duration, album, artist, category);
 
   UI.addSongsToList(song);
 
