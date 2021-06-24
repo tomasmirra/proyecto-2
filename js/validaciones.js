@@ -37,6 +37,7 @@ const userType2 = new CommonUser("User", "user", 6789);
   const ARTIST_SELECTOR = document.querySelector("#songArtist");
   const CATEGORY_SELECTOR = document.querySelector("#songCategory");
   const BTN_FORM_SELECTOR = document.querySelector("#btn-form-properties");
+  const HIGHLIGHT_SONG_SELECTOR = document.querySelector("#songHighlighted");
   BTN_FORM_SELECTOR.disabled = true;
 
   TITLE_SELECTOR.addEventListener("change", formSongValidations);
@@ -44,6 +45,7 @@ const userType2 = new CommonUser("User", "user", 6789);
   ALBUM_SELECTOR.addEventListener("change", formSongValidations);
   ARTIST_SELECTOR.addEventListener("change", formSongValidations);
   CATEGORY_SELECTOR.addEventListener("change", formSongValidations);
+  HIGHLIGHT_SONG_SELECTOR.addEventListener("change", formSongValidations);
 
   function formSongValidations() {
     if (
@@ -51,7 +53,8 @@ const userType2 = new CommonUser("User", "user", 6789);
       document.querySelector("#songDuration").value === "" ||
       document.querySelector("#songAlbum").value === "" ||
       document.querySelector("#songArtist").value === "" ||
-      document.querySelector("#songCategory").value === ""
+      document.querySelector("#songCategory").value === "" ||
+      document.querySelector("#songHighlighted").value === ""
     ) {
       BTN_FORM_SELECTOR.disabled = true;
     } else {
