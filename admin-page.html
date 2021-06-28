@@ -48,7 +48,7 @@
     <div class="row">
       <div class="col">
         <div class="title-btn-container d-flex flex-column">
-          <h1 class="align-self-center my-3">PANEL DE ADMINISTRACIÓN</h1>
+          <h1 class="align-self-center my-3 text-center">PANEL DE ADMINISTRACIÓN</h1>
           <button class="btn btn-primary btn-song-modal mb-3" data-toggle="modal" data-target="#addSongModalForm">Añadir canción</button>
         </div>
         <section>
@@ -56,6 +56,7 @@
             <thead>
               <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Imagen</th>
                 <th scope="col">Título</th>
                 <th scope="col">Duración</th>
                 <th scope="col">Álbum</th>
@@ -98,6 +99,10 @@
             <label for="songArtist">Artista</label>
             <input type="text" class="form-control" id="songArtist" name="artist">
           </div>
+          <div class="form-group">
+            <label for="songImage">Añade una imagen</label>
+            <input type="text" class="form-control" id="songImage" name="image">
+          </div>
           <div class="dropdown d-flex flex-column m-0 m-auto pb-4" id="dropdownOps">
             <label for="songCategory" class="dropdownCategory">Seleccionar categoría</label>
             <select  aria-labelledby="dropdownMenuButton" id="songCategory">
@@ -106,6 +111,14 @@
               <option class="dropdown-item">Rock</option>
               <option class="dropdown-item">Punk</option>
               <option class="dropdown-item">Otro</option>
+            </select>
+          </div>
+          <div class="highlighted-options d-flex flex-column m-0 m-auto pb-4" id="highlighted-options-id">
+            <label for="songHighlighted" class="dropdownCategory">¿Deseas destacar esta canción?</label>
+            <select  aria-labelledby="dropdownMenuButton" id="songHighlighted">
+              <option class="dropdown-item"> </option>
+              <option class="dropdown-item">Si</option>
+              <option class="dropdown-item">No</option>
             </select>
           </div>
           <button type="submit" class="btn btn-primary btn-block" id="btn-form-properties">Guardar</button>
